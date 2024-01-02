@@ -9,7 +9,7 @@ export const sendTwoFactorTokenEmail = async (
   token: string
 ) => {
   await resend.emails.send({
-    from: "no-reply@sapkotasandip.com.np",
+    from: "NextAuth-noreply@sapkotasandip.com.np",
     to: email,
     subject: "2 Factor Authentication Code",
     html: `<body style="font-family: 'Arial', sans-serif;  color: #495057; margin: 0; padding: 0; text-align: center; line-height: 1.6;">
@@ -31,7 +31,7 @@ export const sendPasswordResetEmail = async (
   const resetLink = `${domain}/auth/new-password?token=${token}`
 
   await resend.emails.send({
-    from: "no-reply@sapkotasandip.com.np",
+    from: "NextAuth-noreply@sapkotasandip.com.np",
     to: email,
     subject: "Reset your password.",
     html: `<body style="font-family: 'Arial', sans-serif;  color: #495057; margin: 0; padding: 0; text-align: center; line-height: 1.6;">
@@ -53,7 +53,7 @@ export const sendVerificationEmail = async (
   const confirmLink = `${domain}/auth/new-verification?token=${token}`;
 
   await resend.emails.send({
-    from: "verify@sapkotasandip.com.np",
+    from: "NextAuth-verify@sapkotasandip.com.np",
     to: email,
     subject: "Please Confirm your Email.",
     html: ` <body style="font-family: 'Arial', sans-serif; color: #495057; margin: 0; padding: 0; text-align: center; line-height: 1.6;">
